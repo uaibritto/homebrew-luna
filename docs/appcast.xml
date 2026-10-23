@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Luna</title>
+    <link>https://uaibritto.github.io/homebrew-luna/appcast.xml</link>
+    <language>pt-BR</language>
+    <!-- itens -->
+    <item>
+      <title>Luna 0.2.1</title>
+      <pubDate>Fri, 23 Oct 2026 02:50:49 +0000</pubDate>
+      <sparkle:version>3</sparkle:version>
+      <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/uaibritto/homebrew-luna-playground/releases/tag/v0.2.1</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/uaibritto/homebrew-luna-playground/releases/download/v0.2.1/Luna-0.2.1.dmg" type="application/octet-stream" sparkle:edSignature="S2LNA74e+ygC1XQhgXac+zaXBJSBudAIwLqYlBOLVOF+w2K3qsflSA6Y4WytEEXqSSmpYWa2J3MStLZPERJJAQ==" length="6742693"/>
+    </item>
+    <item>
+      <title>Luna 0.2.0</title>
+      <pubDate>Thu, 22 Oct 2026 23:18:54 +0000</pubDate>
+      <sparkle:version>2</sparkle:version>
+      <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/uaibritto/homebrew-luna-playground/releases/tag/v0.2.0</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/uaibritto/homebrew-luna-playground/releases/download/v0.2.0/Luna-0.2.0.dmg" type="application/octet-stream" sparkle:edSignature="LzTxRMItPEgfK5KFImdyv21uPbNPing4LCbMOlpvTJwEmuAqsMOTntUEkk0iNDeioJpNMm6TF1Ousm/izieQCw==" length="6640227"/>
+    </item>
+    <item>
+      <title>Luna 0.1.0</title>
+      <pubDate>Thu, 22 Oct 2026 07:18:29 +0000</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/uaibritto/homebrew-luna-playground/releases/tag/v0.1.0</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/uaibritto/homebrew-luna-playground/releases/download/v0.1.0/Luna-0.1.0.dmg" type="application/octet-stream" sparkle:edSignature="OeRMZostV7boVAyroxDnTRP3/tMTTN85afBktTuo+vBougMI6y0GVZndxB+bOf7/Cn5zUCefgCyvyfUYqkUZDg==" length="6172756"/>
+    </item>
+  </channel>
+</rss>
