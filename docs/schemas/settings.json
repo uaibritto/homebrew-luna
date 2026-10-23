@@ -1,0 +1,401 @@
+{
+  "$id" : "https://uaibritto.github.io/homebrew-luna/schemas/settings.json",
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties" : false,
+  "properties" : {
+    "$schema" : {
+      "type" : "string"
+    },
+    "appearance" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "accentColor" : {
+          "default" : "",
+          "description" : "Cor de destaque em RRGGBB (vazia: a do macOS).",
+          "pattern" : "^([0-9A-Fa-f]{6})?$",
+          "type" : "string"
+        },
+        "accentOpacity" : {
+          "default" : 100,
+          "description" : "Opacidade da cor de destaque, de 0 a 100.",
+          "maximum" : 100,
+          "minimum" : 0,
+          "type" : "integer"
+        },
+        "codeFont" : {
+          "default" : "",
+          "description" : "Família da fonte do código (vazia: SF Mono).",
+          "type" : "string"
+        },
+        "darkTheme" : {
+          "default" : "Luna Escuro",
+          "description" : "Tema de cores no modo escuro (nome do tema).",
+          "type" : "string"
+        },
+        "iconTheme" : {
+          "default" : "Luna",
+          "description" : "Tema de ícones (nome do tema).",
+          "type" : "string"
+        },
+        "interfaceFont" : {
+          "default" : "",
+          "description" : "Família da fonte da interface (vazia: a do sistema).",
+          "type" : "string"
+        },
+        "ligatures" : {
+          "default" : false,
+          "description" : "Ligaduras da fonte do código.",
+          "type" : "boolean"
+        },
+        "lightTheme" : {
+          "default" : "Luna Claro",
+          "description" : "Tema de cores no modo claro (nome do tema).",
+          "type" : "string"
+        },
+        "mode" : {
+          "default" : "system",
+          "description" : "Modo da janela: system, light ou dark.",
+          "enum" : [
+            "system",
+            "light",
+            "dark"
+          ],
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "editor" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "autoClosingBrackets" : {
+          "default" : true,
+          "description" : "Fechar ( [ { ' \" ` automaticamente.",
+          "type" : "boolean"
+        },
+        "bracketPairColorization" : {
+          "default" : true,
+          "description" : "Uma cor por nível nos pares de { ( [ (editorBracketHighlight.foreground1 a 6 do tema, senão a paleta padrão).",
+          "type" : "boolean"
+        },
+        "bracketPairGuides" : {
+          "default" : false,
+          "description" : "Guias de indentação na cor do nível dos pares.",
+          "type" : "boolean"
+        },
+        "columnRuler" : {
+          "default" : 0,
+          "description" : "Coluna da régua vertical (0: sem régua).",
+          "enum" : [
+            0,
+            80,
+            100,
+            120,
+            140
+          ],
+          "type" : "number"
+        },
+        "foldingControls" : {
+          "default" : "mouseover",
+          "description" : "Quando mostrar os chevrons de dobrar na régua.",
+          "enum" : [
+            "always",
+            "mouseover",
+            "never"
+          ],
+          "type" : "string"
+        },
+        "fontSize" : {
+          "default" : 16,
+          "description" : "Tamanho da fonte do código.",
+          "enum" : [
+            16,
+            18,
+            20
+          ],
+          "type" : "number"
+        },
+        "highlightCurrentLine" : {
+          "deprecated" : true,
+          "deprecationMessage" : "Use editor.renderLineHighlight",
+          "description" : "Obsoleta: use editor.renderLineHighlight (true = line, false = none).",
+          "type" : "boolean"
+        },
+        "indentGuides" : {
+          "default" : true,
+          "description" : "Guias verticais de indentação.",
+          "type" : "boolean"
+        },
+        "lineNumbers" : {
+          "default" : true,
+          "description" : "Números de linha na régua.",
+          "type" : "boolean"
+        },
+        "lineSpacing" : {
+          "default" : "comfortable",
+          "description" : "Espaço entre as linhas.",
+          "enum" : [
+            "compact",
+            "comfortable",
+            "expanded"
+          ],
+          "type" : "string"
+        },
+        "outputFontSize" : {
+          "default" : 13,
+          "description" : "Tamanho da fonte da Saída.",
+          "enum" : [
+            12,
+            13,
+            14,
+            16,
+            18
+          ],
+          "type" : "number"
+        },
+        "renderFinalNewline" : {
+          "default" : true,
+          "description" : "Número da última linha vazia quando o arquivo termina em quebra.",
+          "type" : "boolean"
+        },
+        "renderLineHighlight" : {
+          "default" : "line",
+          "description" : "Destacar a linha do cursor: none, gutter (só a régua), line (só a linha) ou all.",
+          "enum" : [
+            "none",
+            "gutter",
+            "line",
+            "all"
+          ],
+          "type" : "string"
+        },
+        "renderWhitespace" : {
+          "default" : "none",
+          "description" : "Mostrar espaços e tabs: none, selection (na seleção), trailing (no fim da linha) ou all.",
+          "enum" : [
+            "none",
+            "selection",
+            "trailing",
+            "all"
+          ],
+          "type" : "string"
+        },
+        "stickyScroll" : {
+          "default" : true,
+          "description" : "Linhas de abertura da função, classe ou bloco atual presas no topo ao rolar (até 5).",
+          "type" : "boolean"
+        },
+        "wordWrap" : {
+          "default" : true,
+          "description" : "Quebrar linhas longas na largura do editor.",
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "extensions" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "disabled" : {
+          "default" : [
+
+          ],
+          "description" : "Ids das extensões desligadas (nome da pasta ou do arquivo em Extensions).",
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        }
+      },
+      "type" : "object"
+    },
+    "folders" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "hidden" : {
+          "default" : [
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            ".DS_Store"
+          ],
+          "description" : "Nomes que a sidebar e o ⌘P não mostram nas pastas abertas, em qualquer nível.",
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        }
+      },
+      "type" : "object"
+    },
+    "format" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "arrowParens" : {
+          "default" : "always",
+          "description" : "Parênteses no parâmetro único de arrow function.",
+          "enum" : [
+            "always",
+            "avoid"
+          ],
+          "type" : "string"
+        },
+        "bracketSpacing" : {
+          "default" : true,
+          "description" : "Espaços dentro de { }.",
+          "type" : "boolean"
+        },
+        "printWidth" : {
+          "default" : 100,
+          "description" : "Largura máxima da linha ao formatar.",
+          "maximum" : 400,
+          "minimum" : 20,
+          "type" : "integer"
+        },
+        "quoteProps" : {
+          "default" : "as-needed",
+          "description" : "Aspas nas chaves dos objetos.",
+          "enum" : [
+            "as-needed",
+            "consistent",
+            "preserve"
+          ],
+          "type" : "string"
+        },
+        "semi" : {
+          "default" : true,
+          "description" : "Ponto e vírgula no fim das instruções.",
+          "type" : "boolean"
+        },
+        "singleQuote" : {
+          "default" : false,
+          "description" : "Aspas simples nas strings.",
+          "type" : "boolean"
+        },
+        "sortImports" : {
+          "default" : false,
+          "description" : "Organizar imports ao formatar.",
+          "type" : "boolean"
+        },
+        "tabWidth" : {
+          "default" : 2,
+          "description" : "Tamanho do tab no editor e na formatação.",
+          "enum" : [
+            2,
+            4,
+            8
+          ],
+          "type" : "number"
+        },
+        "trailingComma" : {
+          "default" : "all",
+          "description" : "Vírgula depois do último item.",
+          "enum" : [
+            "all",
+            "es5",
+            "none"
+          ],
+          "type" : "string"
+        },
+        "useTabs" : {
+          "default" : false,
+          "description" : "Indentar com tabs em vez de espaços.",
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "library" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "defaultLanguage" : {
+          "default" : "typescript",
+          "description" : "Linguagem de um snippet novo sem extensão no nome.",
+          "enum" : [
+            "javascript",
+            "typescript",
+            "tsx",
+            "jsx",
+            "json",
+            "jsonc"
+          ],
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "menuBar" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "show" : {
+          "default" : true,
+          "description" : "Ícone na barra de menus; ligado, fechar a janela deixa o Luna na barra.",
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "packages" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "policy" : {
+          "default" : "sim",
+          "description" : "Instalar pacotes que faltam: sim, perguntar ou nao.",
+          "enum" : [
+            "sim",
+            "perguntar",
+            "nao"
+          ],
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "run" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "autoRun" : {
+          "default" : true,
+          "description" : "Executar 150 ms depois da última tecla.",
+          "type" : "boolean"
+        },
+        "openOutput" : {
+          "default" : true,
+          "description" : "Abrir a Saída sozinha com erro, saída longa ou log de outro arquivo.",
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "save" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "delay" : {
+          "default" : 500,
+          "description" : "Milissegundos sem teclas antes de salvar (modo afterDelay).",
+          "maximum" : 10000,
+          "minimum" : 200,
+          "type" : "integer"
+        },
+        "formatOnSave" : {
+          "default" : false,
+          "description" : "Formatar nos salvamentos fora da digitação (perder o foco, trocar de snippet, sair, ⌘S).",
+          "type" : "boolean"
+        },
+        "mode" : {
+          "default" : "afterDelay",
+          "description" : "afterDelay: salva depois de um intervalo sem teclas. onFocusChange: ao perder o foco.",
+          "enum" : [
+            "afterDelay",
+            "onFocusChange"
+          ],
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  "title" : "settings.json do Luna",
+  "type" : "object"
+}

@@ -1,0 +1,248 @@
+{
+  "$defs" : {
+    "scope" : {
+      "anyOf" : [
+        {
+          "enum" : [
+            "entity.other.attribute-name",
+            "comment",
+            "variable.other.constant",
+            "constant.other",
+            "constant",
+            "constant.language.boolean",
+            "constant.language",
+            "entity.name.class",
+            "support.class",
+            "entity.name.type",
+            "entity.name.function",
+            "meta.template.expression",
+            "meta.embedded",
+            "support.function",
+            "entity.name.function.method",
+            "keyword.control",
+            "keyword",
+            "storage.type",
+            "storage",
+            "constant.numeric",
+            "keyword.operator",
+            "variable.other.property",
+            "support.variable.property",
+            "meta.object-literal.key",
+            "punctuation",
+            "punctuation.definition.template-expression",
+            "punctuation.section.embedded",
+            "string.quoted",
+            "string",
+            "string.regexp",
+            "string.template",
+            "entity.name.tag",
+            "support.type",
+            "support.type.primitive",
+            "support.type.builtin",
+            "variable.other.readwrite",
+            "variable",
+            "variable.language",
+            "support.variable",
+            "variable.parameter",
+            "support.type.property-name.json",
+            "support.type.property-name"
+          ],
+          "enumDescriptions" : [
+            "atributos JSX, ex.: <input disabled />",
+            "comentários, ex.: // comentário",
+            "constantes em MAIÚSCULAS, ex.: const MAX = 10",
+            "constantes em MAIÚSCULAS, ex.: const MAX = 10",
+            "constantes em MAIÚSCULAS, ex.: const MAX = 10; true e false, ex.: true; null e undefined, ex.: null; números, ex.: 42",
+            "true e false, ex.: true",
+            "true e false, ex.: true; null e undefined, ex.: null",
+            "nomes com maiúscula (classes, new Foo, Math), ex.: new Date(); tipos e interfaces, ex.: let p: Pessoa",
+            "nomes com maiúscula (classes, new Foo, Math), ex.: new Date(); tipos e interfaces, ex.: let p: Pessoa",
+            "nomes com maiúscula (classes, new Foo, Math), ex.: new Date(); tipos e interfaces, ex.: let p: Pessoa; tipos primitivos (string, number), ex.: let n: number",
+            "nomes com maiúscula (classes, new Foo, Math), ex.: new Date(); funções, ex.: function soma() {}; funções embutidas, ex.: parseInt(\"1\"); métodos, ex.: lista.map(f)",
+            "expressões dentro de template (${…}), ex.: `Olá, ${nome}`",
+            "expressões dentro de template (${…}), ex.: `Olá, ${nome}`",
+            "funções, ex.: function soma() {}; funções embutidas, ex.: parseInt(\"1\"); métodos, ex.: lista.map(f)",
+            "métodos, ex.: lista.map(f)",
+            "palavras-chave (if, const, return), ex.: if (ok) return",
+            "palavras-chave (if, const, return), ex.: if (ok) return",
+            "palavras-chave (if, const, return), ex.: if (ok) return",
+            "palavras-chave (if, const, return), ex.: if (ok) return",
+            "números, ex.: 42",
+            "operadores, ex.: a + b",
+            "propriedades, ex.: pessoa.nome",
+            "propriedades, ex.: pessoa.nome",
+            "propriedades, ex.: pessoa.nome; chaves do JSON, ex.: { \"nome\": 1 }",
+            "pontuação, ex.: f(a, b);",
+            "${ e } dos templates, ex.: `${ x }`",
+            "${ e } dos templates, ex.: `${ x }`",
+            "strings, ex.: \"texto\"",
+            "strings, ex.: \"texto\"; regex e templates, ex.: /a+/g; chaves do JSON, ex.: { \"nome\": 1 }",
+            "regex e templates, ex.: /a+/g",
+            "regex e templates, ex.: /a+/g",
+            "tags JSX, ex.: <div>",
+            "tipos e interfaces, ex.: let p: Pessoa; tipos primitivos (string, number), ex.: let n: number",
+            "tipos primitivos (string, number), ex.: let n: number",
+            "tipos primitivos (string, number), ex.: let n: number",
+            "variáveis, ex.: contador",
+            "variáveis, ex.: contador; this e super, ex.: this.nome; parâmetros, ex.: function f(valor) {}",
+            "this e super, ex.: this.nome",
+            "this e super, ex.: this.nome",
+            "parâmetros, ex.: function f(valor) {}",
+            "chaves do JSON, ex.: { \"nome\": 1 }",
+            "chaves do JSON, ex.: { \"nome\": 1 }"
+          ]
+        },
+        {
+          "type" : "string"
+        }
+      ]
+    }
+  },
+  "$id" : "https://uaibritto.github.io/homebrew-luna/schemas/color-theme.json",
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties" : false,
+  "properties" : {
+    "$schema" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "colors" : {
+      "additionalProperties" : {
+        "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+        "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+        "type" : "string"
+      },
+      "description" : "Cores no formato do VS Code. O Luna lê só as dos pares de colchetes (editorBracketHighlight.foreground1 a 6, 13I); as da interface ele aceita, mas não usa: o tema muda só a sintaxe (D41).",
+      "properties" : {
+        "editorBracketHighlight.foreground1" : {
+          "description" : "Cor dos colchetes do nível 1 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        },
+        "editorBracketHighlight.foreground2" : {
+          "description" : "Cor dos colchetes do nível 2 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        },
+        "editorBracketHighlight.foreground3" : {
+          "description" : "Cor dos colchetes do nível 3 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        },
+        "editorBracketHighlight.foreground4" : {
+          "description" : "Cor dos colchetes do nível 4 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        },
+        "editorBracketHighlight.foreground5" : {
+          "description" : "Cor dos colchetes do nível 5 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        },
+        "editorBracketHighlight.foreground6" : {
+          "description" : "Cor dos colchetes do nível 6 (repete depois do último).",
+          "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+          "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "include" : {
+      "description" : "Outro tema, relativo a este arquivo, lido antes: este sobrescreve as cores e vem depois nas regras.",
+      "type" : "string"
+    },
+    "name" : {
+      "description" : "Nome do tema, mostrado nas Configurações e na paleta.",
+      "type" : "string"
+    },
+    "semanticHighlighting" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "semanticTokenColors" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "tokenColors" : {
+      "description" : "Regras de cor da sintaxe: escopos TextMate, cor e estilo. O escopo mais específico vence; no empate, a regra que vem depois.",
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "name" : {
+            "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+          },
+          "scope" : {
+            "anyOf" : [
+              {
+                "$ref" : "#/$defs/scope"
+              },
+              {
+                "items" : {
+                  "$ref" : "#/$defs/scope"
+                },
+                "type" : "array"
+              }
+            ],
+            "description" : "Escopo TextMate, lista de escopos ou escopos separados por vírgula. Sem scope, a cor vale como cor padrão do texto."
+          },
+          "settings" : {
+            "additionalProperties" : false,
+            "description" : "Cor e estilo dos escopos.",
+            "properties" : {
+              "background" : {
+                "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+              },
+              "fontStyle" : {
+                "anyOf" : [
+                  {
+                    "enum" : [
+                      "italic",
+                      "bold",
+                      "underline",
+                      "italic bold",
+                      ""
+                    ]
+                  },
+                  {
+                    "type" : "string"
+                  }
+                ],
+                "description" : "italic, bold e underline separados por espaço; \"\" tira o estilo herdado."
+              },
+              "foreground" : {
+                "description" : "Cor do texto em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA.",
+                "pattern" : "^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$",
+                "patternErrorMessage" : "Cor em #RGB, #RGBA, #RRGGBB ou #RRGGBBAA",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        },
+        "type" : "object"
+      },
+      "type" : "array"
+    },
+    "type" : {
+      "anyOf" : [
+        {
+          "enum" : [
+            "light",
+            "dark",
+            "hc",
+            "hc-light"
+          ]
+        },
+        {
+          "type" : "string"
+        }
+      ],
+      "description" : "light, dark, hc ou hc-light. dark e hc deixam o tema escuro; sem type vale o uiTheme do package.json ou o claro."
+    }
+  },
+  "title" : "Tema de cores do Luna",
+  "type" : "object"
+}

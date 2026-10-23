@@ -1,0 +1,109 @@
+{
+  "$id" : "https://uaibritto.github.io/homebrew-luna/schemas/extension.json",
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "properties" : {
+    "browser" : {
+      "description" : "Código da extensão para a web: o Luna não executa e avisa ao instalar.",
+      "type" : "string"
+    },
+    "contributes" : {
+      "description" : "O que a extensão traz: temas de cores e de ícones.",
+      "properties" : {
+        "iconThemes" : {
+          "description" : "Temas de ícones.",
+          "items" : {
+            "properties" : {
+              "id" : {
+                "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+              },
+              "label" : {
+                "description" : "Nome do tema (sem ele, o name do arquivo do tema).",
+                "type" : "string"
+              },
+              "path" : {
+                "description" : "Arquivo do tema, relativo à pasta da extensão.",
+                "type" : "string"
+              },
+              "uiTheme" : {
+                "description" : "Modo do tema de cores quando o arquivo não tem type: vs (claro), vs-dark, hc-black ou hc-light.",
+                "enum" : [
+                  "vs",
+                  "vs-dark",
+                  "hc-black",
+                  "hc-light"
+                ]
+              }
+            },
+            "required" : [
+              "path"
+            ],
+            "type" : "object"
+          },
+          "type" : "array"
+        },
+        "themes" : {
+          "description" : "Temas de cores.",
+          "items" : {
+            "properties" : {
+              "id" : {
+                "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+              },
+              "label" : {
+                "description" : "Nome do tema (sem ele, o name do arquivo do tema).",
+                "type" : "string"
+              },
+              "path" : {
+                "description" : "Arquivo do tema, relativo à pasta da extensão.",
+                "type" : "string"
+              },
+              "uiTheme" : {
+                "description" : "Modo do tema de cores quando o arquivo não tem type: vs (claro), vs-dark, hc-black ou hc-light.",
+                "enum" : [
+                  "vs",
+                  "vs-dark",
+                  "hc-black",
+                  "hc-light"
+                ]
+              }
+            },
+            "required" : [
+              "path"
+            ],
+            "type" : "object"
+          },
+          "type" : "array"
+        }
+      },
+      "type" : "object"
+    },
+    "displayName" : {
+      "description" : "Nome mostrado na sidebar (sem ele, o name).",
+      "type" : "string"
+    },
+    "icon" : {
+      "description" : "Imagem da extensão, relativa a esta pasta.",
+      "type" : "string"
+    },
+    "main" : {
+      "description" : "Código da extensão: o Luna não executa (extensões são só dados) e avisa ao instalar.",
+      "type" : "string"
+    },
+    "name" : {
+      "description" : "Nome da extensão. Com o publisher, forma o id da pasta em Extensions.",
+      "type" : "string"
+    },
+    "publisher" : {
+      "description" : "Quem publicou; entra no id.",
+      "type" : "string"
+    },
+    "version" : {
+      "description" : "Versão mostrada na página da extensão.",
+      "type" : "string"
+    }
+  },
+  "required" : [
+    "name"
+  ],
+  "title" : "package.json de extensão do Luna",
+  "type" : "object"
+}

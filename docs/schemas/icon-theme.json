@@ -1,0 +1,197 @@
+{
+  "$id" : "https://uaibritto.github.io/homebrew-luna/schemas/icon-theme.json",
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties" : false,
+  "properties" : {
+    "$schema" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "file" : {
+      "description" : "Ícone padrão dos arquivos.",
+      "type" : "string"
+    },
+    "fileExtensions" : {
+      "additionalProperties" : {
+        "type" : "string"
+      },
+      "description" : "Ícone por extensão, sem o ponto (\"ts\", \"test.ts\"). A mais longa vence.",
+      "type" : "object"
+    },
+    "fileNames" : {
+      "additionalProperties" : {
+        "type" : "string"
+      },
+      "description" : "Ícone por nome de arquivo (\"package.json\"). Vence a extensão.",
+      "type" : "object"
+    },
+    "folder" : {
+      "description" : "Ícone padrão das pastas.",
+      "type" : "string"
+    },
+    "folderExpanded" : {
+      "description" : "Ícone padrão das pastas abertas.",
+      "type" : "string"
+    },
+    "folderNames" : {
+      "additionalProperties" : {
+        "type" : "string"
+      },
+      "description" : "Ícone por nome de pasta.",
+      "type" : "object"
+    },
+    "folderNamesExpanded" : {
+      "additionalProperties" : {
+        "type" : "string"
+      },
+      "description" : "Ícone por nome de pasta aberta.",
+      "type" : "object"
+    },
+    "fonts" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "hidesExplorerArrows" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "highContrast" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "iconDefinitions" : {
+      "additionalProperties" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "fontCharacter" : {
+            "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+          },
+          "fontColor" : {
+            "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+          },
+          "fontId" : {
+            "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+          },
+          "fontSize" : {
+            "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+          },
+          "iconPath" : {
+            "description" : "Arquivo SVG ou PNG, relativo ao JSON do tema. Ícones por fonte (fontCharacter) caem no ícone padrão.",
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "description" : "Ícones por id, cada um com o iconPath (SVG ou PNG) relativo a este arquivo.",
+      "type" : "object"
+    },
+    "languageIds" : {
+      "additionalProperties" : {
+        "type" : "string"
+      },
+      "description" : "Ícone por linguagem do VS Code (typescript, javascriptreact, json…), depois da extensão.",
+      "type" : "object"
+    },
+    "light" : {
+      "additionalProperties" : false,
+      "description" : "As mesmas tabelas para o modo claro, por cima das de cima.",
+      "properties" : {
+        "$schema" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "file" : {
+          "description" : "Ícone padrão dos arquivos.",
+          "type" : "string"
+        },
+        "fileExtensions" : {
+          "additionalProperties" : {
+            "type" : "string"
+          },
+          "description" : "Ícone por extensão, sem o ponto (\"ts\", \"test.ts\"). A mais longa vence.",
+          "type" : "object"
+        },
+        "fileNames" : {
+          "additionalProperties" : {
+            "type" : "string"
+          },
+          "description" : "Ícone por nome de arquivo (\"package.json\"). Vence a extensão.",
+          "type" : "object"
+        },
+        "folder" : {
+          "description" : "Ícone padrão das pastas.",
+          "type" : "string"
+        },
+        "folderExpanded" : {
+          "description" : "Ícone padrão das pastas abertas.",
+          "type" : "string"
+        },
+        "folderNames" : {
+          "additionalProperties" : {
+            "type" : "string"
+          },
+          "description" : "Ícone por nome de pasta.",
+          "type" : "object"
+        },
+        "folderNamesExpanded" : {
+          "additionalProperties" : {
+            "type" : "string"
+          },
+          "description" : "Ícone por nome de pasta aberta.",
+          "type" : "object"
+        },
+        "fonts" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "hidesExplorerArrows" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "highContrast" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "languageIds" : {
+          "additionalProperties" : {
+            "type" : "string"
+          },
+          "description" : "Ícone por linguagem do VS Code (typescript, javascriptreact, json…), depois da extensão.",
+          "type" : "object"
+        },
+        "rootFolder" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "rootFolderExpanded" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "rootFolderNames" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "rootFolderNamesExpanded" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        },
+        "showLanguageModeIcons" : {
+          "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+        }
+      },
+      "type" : "object"
+    },
+    "name" : {
+      "description" : "Nome do tema, mostrado nas Configurações.",
+      "type" : "string"
+    },
+    "rootFolder" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "rootFolderExpanded" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "rootFolderNames" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "rootFolderNamesExpanded" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    },
+    "showLanguageModeIcons" : {
+      "description" : "Aceita por compatibilidade com o VS Code; o Luna não lê."
+    }
+  },
+  "required" : [
+    "iconDefinitions"
+  ],
+  "title" : "Tema de ícones do Luna",
+  "type" : "object"
+}
